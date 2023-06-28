@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,21 +8,23 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <script src="assets/js/script.js" defer></script>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script src="../assets/js/script.js" defer></script>
   </head>
 
   <body>
     <header>
-      <a href="./" class="logo">
-        <img src="assets/img/logo.svg" alt="" />
+      <a href="../" class="logo">
+        <img src="../assets/img/logo.svg" alt="" />
       </a>
-
       <nav id="nav">
         <button id="btn-mobile">
           <span id="hamburguer"></span>
         </button>
         <ul id="menu">
+          <li>
+            <a href="../index.html"> Home </a>
+          </li>
           <li>
             <a
               href="https://joaosbarbosa.com.br/"
@@ -37,94 +39,77 @@
               Linkedin
             </a>
           </li>
-          <li>
-            <a
-              href="https://github.com/JoaoSBarbosa/lightboxGallery"
-              target="_blank"
-            >
-              Projeto
-            </a>
-          </li>
+          <li><a href="">Projeto</a></li>
         </ul>
       </nav>
     </header>
     <main id="content">
-      <h1>Galeria</h1>
+      <h1>Natureza 🌱</h1>
       <div class="gallery">
         <div class="gallery-item">
           <img
-            src="assets/img/animais1.jpg"
-            data-src="assets/img/animais1.jpg"
-            data-link="./pages/animais.html"
+            src="../assets/img/natureza1.jpg"
+            data-src="assets/img/natureza1.jpg"
             alt="Cervo"
             class="gallery-image"
-            id="animais"
+            id="animais2"
           />
         </div>
         <div class="gallery-item">
           <img
-            src="assets/img/natureza1.jpg"
-            data-src="assets/img/natureza1.jpg"
-            data-link="./pages/natureza.html"
-            alt="natureza1"
+            src="../assets/img/natureza2.jpg"
+            data-src="../assets/img/natureza2.jpg"
+            alt="Cervo"
             class="gallery-image"
-            id="natureza"
+            id="animais2"
           />
         </div>
         <div class="gallery-item">
           <img
-            src="assets/img/astronomia1.jpg"
-            data-src="assets/img/astronomia1.jpg"
-            data-link="./pages/astronomia.html"
-            alt="astronomia1"
+            src="../assets/img/natureza3.jpg"
+            data-src="assets/img/natureza3.jpg"
+            alt="Cervo"
             class="gallery-image"
-            id="astronomia"
+            id="animais2"
           />
         </div>
         <div class="gallery-item">
           <img
-            src="assets/img/city1.jpg"
-            data-src="assets/img/city1.jpg"
-            data-link="./pages/cidade.html"
-            alt="city"
+            src="../assets/img/natureza4.jpg"
+            data-src="../assets/img/natureza4.jpg"
+            alt="Cervo"
             class="gallery-image"
+            id="animais2"
           />
         </div>
         <div class="gallery-item">
           <img
-            src="assets/img/food1.jpg"
-            data-src="assets/img/food1.jpg"
-            data-link="./pages/comida.html"
-            alt="Comida"
+            src="../assets/img/natureza5.jpg"
+            data-src="../assets/img/natureza5.jpg"
+            alt="Praia"
             class="gallery-image"
+            id="animais2"
           />
         </div>
         <div class="gallery-item">
           <img
-            src="assets/img/carro1.jpg"
-            data-src="assets/img/city1.jpg"
-            data-link="./pages/carros.html"
-            alt="Carro"
+            src="../assets/img/natureza6.jpg"
+            data-src="../assets/img/natureza6.jpg"
+            alt="Praia"
             class="gallery-image"
+            id="animais2"
           />
         </div>
       </div>
-
       <div class="lightbox">
         <div class="lightbox-content">
           <img src="" alt="Imagem em destaque" class="lightbox-img" />
-          <a href="" class="lightbox-readMore"
-            >Ver mais <i class="bi bi-arrow-right"></i>
-          </a>
         </div>
         <a href="#" class="lightbox-close"><i class="bi bi-x"></i></a>
       </div>
     </main>
     <footer id="footer">
-      <p>
-        Developed by
-        <a href="https://joaosbarbosa.com.br/" target="_blank">João Barbosa</a>
-      </p>
+      <p>Developed by <a href="">João Barbosa</a></p>
     </footer>
   </body>
 </html>

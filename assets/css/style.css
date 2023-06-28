@@ -3,6 +3,7 @@
   --between: space-between;
   --color1: #fff;
   --color2: #000000;
+  --color3: #7223d6;
   --items-center: center;
 }
 * {
@@ -13,21 +14,42 @@
   list-style: none;
 }
 
-header a {
-  color: var(--color1);
-  display: block;
-}
 header {
   background-color: var(--color2);
   display: var(--flex);
   justify-content: var(--between);
   align-items: var(--items-center);
-  height: 70px;
+  height: 80px;
   padding: 10px 20px;
+}
+.logo {
+  height: 100%;
+}
+
+.logo img {
+  max-height: 100%;
 }
 #menu {
   gap: 20px;
   display: var(--flex);
+}
+#menu a {
+  color: var(--color1);
+  text-transform: uppercase;
+  display: block;
+  padding: 10px 20px;
+}
+#menu a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  border-radius: 4px;
+  display: block;
+  transition: 0.4s;
+  background-color: var(--color3);
+}
+#menu a:hover::after {
+  width: 100%;
 }
 
 h1 {
@@ -42,7 +64,7 @@ h1 {
   margin: 3rem auto;
 }
 .gallery-item {
-  flex: 0 0 calc(33.333% - 10px);
+  flex: 1 1 300px;
 }
 
 .gallery-image {
@@ -61,9 +83,24 @@ h1 {
   box-shadow: 0px 6px 14px 0px rgba(0, 0, 0, 0.68);
   border-radius: 5px;
 }
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 10;
+  height: 100vh;
+}
 .lightbox-content {
   display: var(--flex);
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
+  color: var(--color1);
+  gap: 2rem;
+  height: 100%;
 }
 .lightbox-readMore {
   width: max-content;
@@ -86,27 +123,8 @@ h1 {
   );
   transform: scale(1.2);
 }
-.lightbox {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 10;
-  height: 100vh;
-}
-.lightbox-content {
-  display: var(--flex);
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color: #fff;
-  gap: 2rem;
-  height: 100%;
-}
+
 .lightbox-img {
-  /* max-width: 800px; */
   max-height: 800px;
   object-fit: cover;
 }
@@ -128,13 +146,111 @@ h1 {
 }
 @keyframes close {
   0% {
-    transform: scale(1);
+    color: var(--color1);
   }
-  50% {
-    transform: scale(1.2);
-    color: rgb(255, 151, 151);
+  20% {
+    color: #ffceda;
   }
-  100% {
-    transform: scale(1);
+  40% {
+    color: #fab3c5;
+  }
+  60% {
+    color: #f8a0b6;
+  }
+}
+#footer,
+#footer a {
+  color: var(--color1);
+}
+#footer {
+  background-color: #000000;
+  text-align: var(--items-center);
+  padding: 4rem 0;
+}
+#footer a {
+  color: var(--color1);
+}
+#btn-mobile {
+  display: none;
+}
+@media (max-width: 800px) {
+  #menu {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 80px;
+    width: 100%;
+    height: 0;
+    background-color: #000000;
+    transition: 0.6s;
+    visibility: hidden;
+    overflow: hidden;
+    z-index: 10;
+  }
+  #nav.active #menu {
+    height: calc(100vh - 80px);
+    visibility: visible;
+    overflow: auto;
+  }
+  #menu a {
+    padding: 1rem 0;
+    margin: 0 1rem;
+  }
+  #btn-mobile {
+    display: flex;
+    background-color: transparent;
+    border: none;
+  }
+  #hamburguer {
+    border-top: 3px solid var(--color3);
+    width: 30px;
+    display: block;
+  }
+  #hamburguer::after,
+  #hamburguer::before {
+    content: "";
+    width: 30px;
+    height: 3px;
+    background-color: var(--color3);
+    display: block;
+    margin-top: 8px;
+    transition: 0.3s;
+  }
+  #nav.active #hamburguer {
+    border-top-color: transparent;
+  }
+  #nav.active #hamburguer::before {
+    transform: rotate(135deg);
+  }
+  #nav.active #hamburguer::after {
+    transform: rotate(-135deg);
+    margin-top: -3px;
+  }
+}
+@media (max-width: 600px) {
+  .logo {
+    display: var(--flex);
+  }
+
+  .lightbox-img {
+    max-height: 600px;
+    object-fit: cover;
+  }
+}
+@media (max-width: 400px) {
+  .logo img {
+    width: 150px;
+  }
+  .gallery {
+    max-width: 100%;
+    margin: 10px;
+  }
+  .gallery-image {
+    border-radius: 5px;
+  }
+  .lightbox-img {
+    max-height: 500px;
+    width: 300px;
+    object-fit: cover;
   }
 }

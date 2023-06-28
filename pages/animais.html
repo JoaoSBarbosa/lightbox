@@ -8,19 +8,23 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <script src="assets/js/script.js" defer></script>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script src="../assets/js/script.js" defer></script>
   </head>
 
   <body>
     <header>
-      <div class="logo">
-        <a href="./"> .BARBOSA DEVELOPER </a>
-      </div>
+      <a href="../" class="logo">
+        <img src="../assets/img/logo.svg" alt="" />
+      </a>
+
       <nav id="nav">
+        <button id="btn-mobile">
+          <span id="hamburguer"></span>
+        </button>
         <ul id="menu">
           <li>
-            <a href="index.html"> Home </a>
+            <a href="../index.html"> Home </a>
           </li>
           <li>
             <a
@@ -45,8 +49,9 @@
       <div class="gallery">
         <div class="gallery-item">
           <img
-            src="assets/img/animais1.jpg"
-            data-src="assets/img/animais1.jpg"
+            src="../assets/img/animais1.jpg"
+            data-src="../assets/img/animais1.jpg"
+            data-link="./pages/animais.html"
             alt="Cervo"
             class="gallery-image"
             id="animais2"
@@ -54,38 +59,43 @@
         </div>
         <div class="gallery-item">
           <img
-            src="assets/img/animais2.jpg"
+            src="../assets/img/animais2.jpg"
+            data-src="../assets/img/animais2.jpg"
             alt="natureza1"
             class="gallery-image"
-            id="animais2"
+            id="Alce"
           />
         </div>
         <div class="gallery-item">
           <img
-            src="assets/img/animais3.jpg"
+            src="../assets/img/animais3.jpg"
+            data-src="../assets/img/animais3.jpg"
             alt="animais"
             class="gallery-image"
-            id="animais3"
+            id="Leão"
           />
         </div>
         <div class="gallery-item">
           <img
-            src="assets/img/animais4.jpg"
-            alt="animais"
-            class="gallery-image"
-          />
-        </div>
-        <div class="gallery-item">
-          <img
-            src="assets/img/animais5.jpg"
-            alt="animais"
+            src="../assets/img/animais4.jpg"
+            data-src="../assets/img/animais4.jpg"
+            alt="Lobo"
             class="gallery-image"
           />
         </div>
         <div class="gallery-item">
           <img
-            src="assets/img/animais6.jpg"
-            alt="animais"
+            src="../assets/img/animais5.jpg"
+            data-src="../assets/img/animais5.jpg"
+            alt="Gato"
+            class="gallery-image"
+          />
+        </div>
+        <div class="gallery-item">
+          <img
+            src="../assets/img/animais6.jpg"
+            data-src="../assets/img/animais6.jpg"
+            alt="Flamingos"
             class="gallery-image"
           />
         </div>
@@ -93,10 +103,15 @@
       <div class="lightbox">
         <div class="lightbox-content">
           <img src="" alt="Imagem em destaque" class="lightbox-img" />
+          <a href="" class="lightbox-readMore" style="display: none"
+            >Ver mais <i class="bi bi-arrow-right"></i>
+          </a>
         </div>
         <a href="#" class="lightbox-close"><i class="bi bi-x"></i></a>
       </div>
     </main>
-    <footer id="footer"></footer>
+    <footer id="footer">
+      <p>Developed by <a href="">João Barbosa</a></p>
+    </footer>
   </body>
 </html>
