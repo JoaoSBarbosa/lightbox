@@ -1,0 +1,31 @@
+# Galeria com Lightbox 🖼️
+
+Este é um projeto de uma galeria de imagens com lightbox, desenvolvida usando HTML, CSS e Javascript. A galeria permite que o usuário clique em uma imagem para visualizá-la em destaque em um modal, juntamente com a opção de acessar outras imagens do mesmo gênero e um botão para fechar o modal.
+
+## Funcionalidades
+
+- Visualização em destaque: Ao clicar em uma imagem da galeria, uma modal será aberta, exibindo a imagem clicada em destaque.
+- Navegação entre imagens: Dentro do modal, o usuário pode acessar outras imagens do mesmo gênero por meio de um link fornecido.
+- Fechar o modal: Há um botão no modal que permite ao usuário fechá-lo e retornar à galeria.
+
+## Pré-requisitos
+
+- Navegador da web atualizado
+
+## Como usar
+
+1. Faça o download ou clone este repositório.
+2. Abra o arquivo `index.html` em um navegador da web.
+
+## Personalização
+
+Você pode personalizar esta galeria adicionando suas próprias imagens e estilos. Para isso, siga as etapas abaixo:
+
+1. Abra o arquivo `index.html` no editor de sua escolha.
+2. Localize a seção de código onde as imagens estão sendo exibidas. Ela estará marcada com uma tag `<div>` e uma classe 'gallery'.
+3. Substitua as imagens existentes pelos caminhos das suas próprias imagens. Certifique-se de que as imagens estejam no formato correto e estejam localizadas no diretório do projeto.
+4. Se desejar, você também pode ajustar os estilos da galeria editando o arquivo `style.css`. Lá você encontrará as classes e os estilos aplicados aos elementos da galeria.
+
+## Contribuição
+
+Contribuições são bem-vindas! Se você deseja melhorar este projeto ou adicionar novos recursos, sinta-se à vontade para enviar um pull request.
