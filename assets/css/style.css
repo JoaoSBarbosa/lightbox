@@ -2,6 +2,7 @@
   --flex: flex;
   --between: space-between;
   --color1: #fff;
+  --color2: #000000;
   --items-center: center;
 }
 * {
@@ -17,7 +18,7 @@ header a {
   display: block;
 }
 header {
-  background-color: black;
+  background-color: var(--color2);
   display: var(--flex);
   justify-content: var(--between);
   align-items: var(--items-center);
@@ -29,13 +30,37 @@ header {
   display: var(--flex);
 }
 
-main img {
-  max-width: 300px;
+h1 {
+  text-align: var(--items-center);
+  margin: 2rem 0;
 }
 .gallery {
   display: var(--flex);
+  flex-wrap: wrap;
+  gap: 5px;
+  max-width: 1200px;
+  margin: 3rem auto;
+}
+.gallery-item {
+  flex: 0 0 calc(33.333% - 10px);
 }
 
+.gallery-image {
+  width: 100%;
+  height: 400px;
+  transition: 0.4s;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 0 0 5px 5px;
+}
+
+.gallery-image:hover {
+  transform: scale(1.1);
+  -webkit-box-shadow: 0px 6px 14px 0px rgba(0, 0, 0, 0.68);
+  -moz-box-shadow: 0px 6px 14px 0px rgba(0, 0, 0, 0.68);
+  box-shadow: 0px 6px 14px 0px rgba(0, 0, 0, 0.68);
+  border-radius: 5px;
+}
 .lightbox-content {
   display: var(--flex);
   flex-direction: column;
@@ -48,7 +73,9 @@ main img {
   transition: all 0.4s;
   border: none;
   border-radius: 10px;
+  text-transform: uppercase;
 }
+
 .lightbox-readMore:hover {
   background: rgb(2, 0, 36);
   background: linear-gradient(
@@ -57,4 +84,57 @@ main img {
     rgba(9, 9, 121, 1) 35%,
     rgba(0, 212, 255, 1) 100%
   );
+  transform: scale(1.2);
+}
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+  height: 100vh;
+}
+.lightbox-content {
+  display: var(--flex);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  gap: 2rem;
+  height: 100%;
+}
+.lightbox-img {
+  /* max-width: 800px; */
+  max-height: 800px;
+  object-fit: cover;
+}
+.lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  color: var(--color1);
+  font-size: 4rem;
+  border: 1px solid var(--color1);
+  padding: 0.1rem 0.3rem;
+  transition: ease-in-out 0.4s;
+  animation: close 0.9s infinite;
+}
+.lightbox-close:hover {
+  background-color: var(--color1);
+  color: var(--color2);
+  border: 1px solid var(--color2);
+}
+@keyframes close {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+    color: rgb(255, 151, 151);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
